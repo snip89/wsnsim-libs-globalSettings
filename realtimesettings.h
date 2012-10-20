@@ -13,6 +13,7 @@ class RealTimeSettings : public IHostRealTimeSettings, public IClientRealTimeSet
 public:
     RealTimeSettings();
 
+    /*virtual*/ QStringList clients();
     /*virtual*/ void setClientConnectionInfo(QString client, QString ip, quint64 port);
     /*virtual*/ QString projectPath(QString client);
     /*virtual*/ QString ip(QString client);

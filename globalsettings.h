@@ -9,6 +9,6 @@
 #define MY_EXPORT
 #endif
 
-extern "C" MY_EXPORT RealTimeSettings getRealTimeSettings();
+extern "C" MY_EXPORT RealTimeSettings* getRealTimeSettings();
 
 #endif // GLOBALSETTINGS_H

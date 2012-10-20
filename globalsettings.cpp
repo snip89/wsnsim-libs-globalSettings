@@ -1,6 +1,6 @@
 #include "globalsettings.h"
 
-extern "C" MY_EXPORT RealTimeSettings getRealTimeSettings()
+extern "C" MY_EXPORT RealTimeSettings *getRealTimeSettings()
 {
-    return RealTimeSettings();
+    return new RealTimeSettings();
 }

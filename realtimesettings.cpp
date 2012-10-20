@@ -4,6 +4,16 @@ RealTimeSettings::RealTimeSettings()
 {
 }
 
+QStringList RealTimeSettings::clients()
+{
+    QSettings settings("wsnsim", "global");
+
+    if(!settings.contains("RealTime/ClientsList"))
+        settings.setValue("RealTime/ClientsList", QStringList());
+
+    return settings.value("RealTime/ClientsList").value<QStringList>();
+}
+
 void RealTimeSettings::setClientConnectionInfo(QString client, QString ip, quint64 port)
 {
     validateClientSettings(client);
