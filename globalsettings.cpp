@@ -1,6 +1,11 @@
 #include "globalsettings.h"
 
-extern "C" MY_EXPORT RealTimeSettings *getRealTimeSettings()
+extern "C" MY_EXPORT HostRealTimeSettings *getHostRealTimeSettings()
 {
-    return new RealTimeSettings();
+    return new HostRealTimeSettings();
+}
+
+extern "C" MY_EXPORT ClientRealTimeSettings* getClientRealTimeSettings()
+{
+    return new ClientRealTimeSettings();
 }
