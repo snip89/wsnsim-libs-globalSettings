@@ -5,8 +5,7 @@ QT       += core gui
 HEADERS += \
     globalsettings.h \
     realtimesettings.h \
-    ihostrealtimesettings.h \
-    iclientrealtimesettings.h
+    irealtimesettings.h
 
 SOURCES += \
     globalsettings.cpp \
